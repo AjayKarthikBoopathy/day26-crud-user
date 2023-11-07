@@ -1,42 +1,85 @@
-import React from "react";
 import { useHistory } from "react-router-dom";
 import Base from "../Base/Base";
-//import data from './Data/data';
+import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { useEffect } from 'react';
+import React, { useState } from 'react';
 
-function Users({userdata,setUserdata}) {
-    //const [userdata, setUserdata] = useState(data)
-    console.log(userdata);
-    //const [editIdx, setEditIdx] = useState();
-    const history = useHistory()
+const listUser = "";
+const endpoint = "";
+
+
+function Users() {
+
+    const [product1, setProduct1] = useState("tv");
+    const [product, setProduct] = useState([]);
+    console.log(product);
+
+    const handleChange2 = (event) => {
+        //endpoint=event.target.value;
+        setProduct1(event.target.value)
+    };
+
+
+  
+    useEffect(()=>{
+      const getProducts = async () =>{
+          //const response = await fetch("http://localhost:9001/products?q=mobile", {
+          const response = await fetch(`https://webscrape-bctl.onrender.com/products?q=${product1}`); 
+          const data = await response.json();
+          if(data){
+            setProduct(data);
+            console.log(product);
+          }
+      }
+      getProducts();
+    }, [product1])
+
+
+
+
     
-    //delete 
-    const deleteUser = (studId)=>{
-        const remainingUsers = userdata.filter((stud, idx)=> idx !== studId)
-        setUserdata(remainingUsers)
-    }
-
+    console.log(product);
+    
+    const history = useHistory()
+   
     return (
         <Base>
         <div className="newuser">
-        <button className="newuser-button"
-        onClick={()=>history.push("/add")}
-        >Click to add User</button></div>
+            <div>
+                <h3>Check your price here</h3>
+            </div>
+        {/* <button className="newuser-button"
+        
+        >Click</button> */}
+        </div>
+
+                <Box>
+                <FormControl sx={{ m: 1, minWidth: 110 }} size="small">
+                    <InputLabel id="demo-select-small-label">Product</InputLabel>
+                    <Select
+                        labelId="demo-select-small-label"
+                        id="demo-select-small"
+                        value={listUser}
+                        label="Product"
+                        onChange={handleChange2}
+                    >
+                        <MenuItem value={"mobile"}>Mobile</MenuItem>
+                        <MenuItem value={"tv"}>TV</MenuItem>
+                    </Select>
+                </FormControl>
+                </Box>
 
         <div className="card-container">
             
-            {userdata.map((stud, idx) => (
+            {product.map((prod, idx) => (
                 <div className="card" key={idx}>
                         <div className="content">
-                            <h3>{stud.name}</h3>
-                            <p>{stud.batch}</p>
-                            <p>{stud.gender}</p>
-                            <p>{stud.qualification}</p>
+                            <h3>{prod.productName}</h3>
+                            <p>{prod.price}</p>
+                            {/* <p>{prod.image}</p> */}
+                            <p>{prod.productLink}</p>
                         </div>
 
-                        <div className="control">
-                            <button className="btn" onClick={()=>history.push(`/edit/${idx}`)}>edit</button> {" "}
-                            <button className="btn" onClick={()=>deleteUser(idx)}>delete</button>
-                        </div>
                         
                 </div>
             ))}
@@ -49,3 +92,6 @@ function Users({userdata,setUserdata}) {
 }
 
 export default Users;
+
+
+export {endpoint}

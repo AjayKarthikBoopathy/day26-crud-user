@@ -10,12 +10,14 @@ const Base = ({children}) => {
   
             <div className="heading-lists">
                 <div>
-                <h3>Student Website</h3>
+                <h3>Web Scraping Website</h3>
                 </div>
                 <div>
-                <button className="list-button"
+
+                {/* <button className="list-button"
                 onClick={()=>history.push("/")}
-                ><h4>Goto List</h4></button>
+                ><h4>Get Products</h4></button> */}
+                
                 </div>
             </div>
   

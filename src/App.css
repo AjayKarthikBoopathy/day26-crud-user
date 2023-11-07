@@ -30,18 +30,22 @@
   gap: 2rem;
   align-content: space-around;
   border: 1px solid red;
-  width: 200px;
-  height: 200px;
+  width: 270px;
+  height: 300px;
   margin: 12px;
   background-color: rgb(161, 183, 255);
   border-radius: 15px;
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .card-container{
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 4fr));
+  /* height: 700px;
+  width: 400px; */
   
 }
 
