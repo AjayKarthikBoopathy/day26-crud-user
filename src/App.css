@@ -38,6 +38,7 @@
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  box-shadow: 10px 10px 10px lightslategray;
 }
 
 .card-container{
@@ -129,6 +130,9 @@
 .img {
   height: 120px;
   min-height: 120px;
+  border: solid 0.3px rgb(172, 172, 172);
+  border-radius: 2px;
   width: 120px;
   margin-top: 10px;
+  font-size: smaller;
 }
