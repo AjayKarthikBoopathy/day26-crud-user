@@ -46,7 +46,7 @@ function Users() {
         <Base>
         <div className="newuser">
             <div>
-                <h3>Check your price here</h3>
+                <h3>Check your product price here...</h3>
             </div>
         {/* <button className="newuser-button"
         
@@ -74,10 +74,19 @@ function Users() {
             {product.map((prod, idx) => (
                 <div className="card" key={idx}>
                         <div className="content">
-                            <h3>{prod.productName}</h3>
-                            <p>{prod.price}</p>
-                            {/* <p>{prod.image}</p> */}
-                            <p>{prod.productLink}</p>
+                            
+                            <h3 className="prodname">{prod.productName}</h3>
+                            
+                            <div>
+                            <img src={prod.imageUrl} className="img" alt="Image not available" />
+                            </div>
+
+                            <p className="rate">{prod.price}</p>
+
+                            <div className="longtexts">
+                            <a href={prod.productLink}  target="_blank">{prod.productLink}</a>
+                            
+                            </div>
                         </div>
 
                         

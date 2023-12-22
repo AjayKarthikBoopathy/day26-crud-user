@@ -101,3 +101,33 @@
   width: 30vw;
   margin-left: 40px;
 }
+
+.longtexts {
+  width: 240px;
+  height: 44px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* This is where the magic happens. */
+}
+
+.prodname {
+  width: 280px;
+  height: 74px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* This is where the magic happens. */
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rate {
+  font-size: large;
+}
+
+.img {
+  height: 120px;
+  width: 120px;
+  margin-top: 10px;
+}
