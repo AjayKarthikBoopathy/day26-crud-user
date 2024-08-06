@@ -53,7 +53,7 @@ function Users() {
         >Click</button> */}
         </div>
 
-                <Box>
+                {/* <Box>
                 <FormControl sx={{ m: 1, minWidth: 110 }} size="small">
                     <InputLabel id="demo-select-small-label">Product</InputLabel>
                     <Select
@@ -68,7 +68,38 @@ function Users() {
                         
                     </Select>
                 </FormControl>
-                </Box>
+                </Box> */}
+
+
+   {/* <div>
+     <label>
+       Choose your Item
+       <select value={listUser} onChange={handleChange2}>
+         <option value="mobile">Mobile</option>
+         <option value="tv">TV</option>
+         <option value="laptop">Laptop</option>
+       </select>
+     </label>   */}
+     {/* <p>We eat {value}!</p> */}
+   {/*</div> */}
+
+
+        <div className='value-area'>
+            <div style={{ paddingTop: "4.5px"}}>
+              <label><strong>Choose your Item</strong></label>
+            </div>
+
+            <div>
+              <select name='country' className='inputss' style={{ width: "190px", height: "40px" }} onChange={(e) => handleChange2(e)}>
+                <option value=""> --Select Item--</option>
+                <option value="mobile">Mobile</option>
+                <option value="tv">TV</option>
+                {/* <option value="laptop">Laptop</option>   */}
+              </select> 
+            </div>
+            
+        </div>
+
 
         <div className="card-container">
             

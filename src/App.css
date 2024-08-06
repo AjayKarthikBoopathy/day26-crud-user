@@ -47,7 +47,7 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 4fr));
   /* height: 700px;
   width: 400px; */
-  
+  padding-bottom: 40px;
 }
 
 .heading-lists{
@@ -135,4 +135,32 @@
   width: 120px;
   margin-top: 10px;
   font-size: smaller;
+}
+
+label {
+  font-size: large;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.inputss {
+  width: 600px;
+}
+
+option {
+  font-size: medium;
+  border-radius: 1px;
+  font-weight: 500;
+  height: 12px;
+  text-indent: 2px;
+  border-radius: 13px;
+}
+
+.value-area {
+  margin: 0 27%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 30%;
+  justify-content: space-around;
 }
