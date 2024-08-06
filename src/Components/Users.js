@@ -3,6 +3,8 @@ import Base from "../Base/Base";
 import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useEffect } from 'react';
 import React, { useState } from 'react';
+import LoadingComp from "./LoadingComp";
+import EachComp from "./EachComp";
 
 const listUser = "";
 const endpoint = "";
@@ -103,28 +105,7 @@ function Users() {
 
         <div className="card-container">
             
-            {product.map((prod, idx) => (
-                <div className="card" key={idx}>
-                        <div className="content">
-                            
-                            <h3 className="prodname">{prod.productName}</h3>
-                            
-                            <div>
-                            <img src={prod.imageUrl} className="img" alt="Image not available" />
-                            </div>
-
-                            <p className="rate">{prod.price}</p>
-
-                            <div className="longtexts">
-                            <a href={prod.productLink}  target="_blank">{prod.productLink}</a>
-                            
-                            </div>
-                        </div>
-
-                        
-                </div>
-            ))}
-
+            { product.length==0? <LoadingComp /> : <EachComp product={product} setProduct={setProduct} /> }
 
         </div>
         </Base>

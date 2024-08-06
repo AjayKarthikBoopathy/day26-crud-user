@@ -149,11 +149,7 @@ label {
 
 option {
   font-size: medium;
-  border-radius: 1px;
   font-weight: 500;
-  height: 12px;
-  text-indent: 2px;
-  border-radius: 13px;
 }
 
 .value-area {
