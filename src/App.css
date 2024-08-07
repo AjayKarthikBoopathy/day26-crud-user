@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .heading{
@@ -20,9 +21,15 @@
   width: 100%;
   text-align: center;
   height: 75%;
-  padding-left: 150px;
+  /* padding-left: 150px; */
+  /* padding-left: 10px; */
   padding-top: 20px;
 }
+
+/* 
+.base {
+  padding-left: 150px;
+} */
 
 .card{
   display: flex;
@@ -48,11 +55,14 @@
   /* height: 700px;
   width: 400px; */
   padding-bottom: 40px;
+  padding-left: 4%;
 }
 
 .heading-lists{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   height: 48px;
@@ -65,6 +75,7 @@
 
 .newuser{
   width: 200px;
+  padding-left: 3.5%;
 }
 
 .list-button{
@@ -153,10 +164,11 @@ option {
 }
 
 .value-area {
-  margin: 0 27%;
+  margin: 0 30%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 30%;
-  justify-content: space-around;
+  
+  justify-content: center;
+  column-gap: 5px;
 }

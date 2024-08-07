@@ -45,7 +45,7 @@ function Users() {
     const history = useHistory()
    
     return (
-        <Base>
+        <Base className="base">
         <div className="newuser">
             <div>
                 <h3>Check your product price here...</h3>
